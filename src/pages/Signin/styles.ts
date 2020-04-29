@@ -11,22 +11,31 @@ export const Container = styled.div`
 
 `;
 
+
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     place-content: center;
     align-items: center;
+    
 
     width: 100%;
     max-width: 700px;
 
     form{
-        margin: 80px 0;
+        margin: 40px 0;
         width: 340px;
         text-align: center;
+        
+        span{
+            font-size:18px;
+            margin-bottom: 12px;
+            font-family: 'Bebas Neue', cursive;
+        }
 
         h1{
             margin-bottom: 24px;
+            font-family: 'Bebas Neue', cursive;
         }
 
         input{
@@ -36,9 +45,11 @@ export const Content = styled.div`
             padding: 16px;
             width: 100%;
             color: #F4EDE8;
+            font-family: 'Nunito Sans', sans-serif;
 
             &::placeholder {
                 color: #666300;
+
             }
 
             & + input {
@@ -58,6 +69,7 @@ export const Content = styled.div`
             font-weight: 500;
             margin-top: 16px;
             transition: background-color 0.2s;
+            font-family: 'Nunito Sans', sans-serif;
 
             &:hover{
                background: ${shade(0.2, '#ff9000')};
@@ -70,6 +82,8 @@ export const Content = styled.div`
             margin-top: 24px;
             text-decoration: none;
             transition: color 0.2s;
+            /* font-family: 'Bebas Neue', cursive; */
+            font-family: 'Nunito Sans', sans-serif;
 
             &:hover{
                color: ${shade(0.2, '#F4EDE8')};
@@ -81,11 +95,13 @@ export const Content = styled.div`
         > a {
             color: #ff9000;
             display: block;
-            margin-top: 24px;
+            margin-top: 10px;
             text-decoration: none;
             transition: color 0.2s;
             display: flex;
             align-items: center;
+            /* font-family: 'Bebas Neue', cursive; */
+            font-family: 'Nunito Sans', sans-serif;
          
 
             svg {
