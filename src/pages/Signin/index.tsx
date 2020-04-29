@@ -1,29 +1,41 @@
-import React from "react";
-import { FiLogIn, FiUserPlus } from "react-icons/fi";
-
-import logoImg from '../../assets/logo.svg';
+import React from 'react';
+import { FiUserPlus, FiMail, FiLock } from 'react-icons/fi';
 import Clock from '../../lib/clock';
 
-import { Container, Content, Background } from "./styles";
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+
+import logoImg from '../../assets/logo.svg';
+
+import { Container, Content, Background } from './styles';
 
 const SignIn: React.FC = () => (
     <Container>
         <Content>
-            
-            <img src={logoImg} alt="GoBarber"/>
+            <img src={logoImg} alt="GoBarber" />
             <form>
-                <Clock/>
+                <Clock />
                 <h1>Faça seu Logon</h1>
-                <input type="mail" placeholder="E-mail" />
-                <input type="password" placeholder="Senha" />
-                <button type="submit">Entrar</button>
+                <Input
+                    name="email"
+                    icon={FiMail}
+                    type="mail"
+                    placeholder="E-mail"
+                />
+                <Input
+                    name="password"
+                    icon={FiLock}
+                    type="password"
+                    placeholder="Senha"
+                />
+                <Button type="submit">Entrar</Button>
 
                 <a href="forgot">Esqueci minha senha</a>
-               
             </form>
-                <a href="login">
-                    <FiUserPlus />
-                Criar Conta</a>
+            <a href="login">
+                <FiUserPlus />
+                Criar Conta
+            </a>
         </Content>
         <Background />
     </Container>
