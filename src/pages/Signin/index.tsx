@@ -2,10 +2,10 @@ import React from 'react';
 import { FiUserPlus, FiMail, FiLock } from 'react-icons/fi';
 import Clock from '../../lib/clock';
 
+import logoImg from '../../assets/logo.svg';
+
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-
-import logoImg from '../../assets/logo.svg';
 
 import { Container, Content, Background } from './styles';
 
