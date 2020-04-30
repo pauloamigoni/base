@@ -1,8 +1,8 @@
 import React from 'react';
 import { FiUserPlus, FiMail, FiLock } from 'react-icons/fi';
-import Clock from '../../lib/clock';
+import Clock from '../../lib/clock/clock';
 
-import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/logo.png';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -14,7 +14,7 @@ const SignIn: React.FC = () => (
         <Content>
             <img src={logoImg} alt="GoBarber" />
             <form>
-                <Clock />
+               
                 <h1>Faça seu Logon</h1>
                 <Input
                     name="email"
@@ -36,6 +36,9 @@ const SignIn: React.FC = () => (
                 <FiUserPlus />
                 Criar Conta
             </a>
+
+            <Clock />
+
         </Content>
         <Background />
     </Container>
