@@ -1,0 +1,66 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/react",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "react/jsx-filename-extension": [
+            "error",
+            { "extensions": [".js", ".jsx", ".tsx", ".ts"] }
+        ],
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "import/prefer-default-export": "off",
+        "no-underscore-dangle": "off",
+        "class-methods-use-this": "off",
+        "@typescript-eslint/camelcase": "off",
+        "no-console": ["error", { "allow": ["tron"] }],
+
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "_"
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "always",
+                "jsx": "always",
+                "ts": "always",
+                "tsx": "always",
+                "mjs": "always"
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "babel-plugin-root-import": {
+                "rootPathSuffix": "src"
+            }
+        }
+    }
+}
