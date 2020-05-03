@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
-
-import signInBackgroungImg from '../../assets/sign-in-background.png';
+import signUpBackgroungImg from '../../assets/sign-up-background.png';
 
 export const Container = styled.div`
     height: 100vh;
@@ -19,10 +18,10 @@ export const Content = styled.div`
     max-width: 700px;
 `;
 
-const apperarFromLeft = keyframes`
+const apperarFromRight = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
@@ -36,14 +35,13 @@ export const AnimationContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    animation: ${apperarFromLeft} 1s;
+    animation: ${apperarFromRight} 1s;
 
     form {
         margin: 10px 0;
         width: 340px;
         text-align: center;
 
-        span {
             font-size: 18px;
             margin-bottom: 12px;
             font-family: 'Bebas Neue', cursive;
@@ -92,6 +90,6 @@ export const AnimationContainer = styled.div`
 
 export const Background = styled.div`
     flex: 1;
-    background: url(${signInBackgroungImg}) no-repeat center;
+    background: url(${signUpBackgroungImg}) no-repeat center;
     background-size: cover;
 `;
