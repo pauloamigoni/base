@@ -119,8 +119,8 @@ export const Body = styled.div`
 
 export const PopUp = styled.div`
     display: inline-block;
-    width: 22vmin;
-    height: 22vmin;
+    width: 21vmin;
+    height: 21vmin;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
@@ -132,8 +132,8 @@ export const PopUp = styled.div`
         margin-top: 2px;
     }
     img {
-        height: 20vmin;
-        margin-left: -25%;
+        height: 22vmin;
+        margin-left: -38%;
     }
 
     > img {
@@ -144,7 +144,7 @@ export const Message = styled.div<ContainerProps>`
     background: #ffe271;
     padding: 2vmin 5vmin 2vmin 10vmin;
     border-radius: 0px 50px 50px 0px;
-    font-size: 3vmin;
+    font-size: 2.8vmin;
     text-align: left;
     font-family: 'Lato', sans-serif;
     ${(props) => toastTypeVariations[props.type || 'info']}
