@@ -18,6 +18,23 @@ const toastTypeVariations = {
     `,
 };
 
+const toastTypeVariationsButtom = {
+    info: css`
+        background: #3172b7;
+        color: #ebf8ff;
+    `,
+
+    success: css`
+        background: #2e656a;
+        color: #e6fffa;
+    `,
+
+    error: css`
+        background: #c53030;
+        color: #fddede;
+    `,
+};
+
 interface ContainerProps {
     type?: 'success' | 'error' | 'info';
     hasDescription: boolean;
@@ -67,4 +84,112 @@ export const Container = styled(animated.div)<ContainerProps>`
                 margin-top: 0;
             }
         `}
+`;
+
+export const BodyContaniner = styled.div`
+    margin: 0px;
+    padding: 5vmin 5vmin 5vmin 5vmin;
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-style: italic;
+    /* -webkit-font-smoothing: antialiased; */
+    & + div {
+        margin-top: 8px;
+    }
+`;
+
+export const Body = styled.div`
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding-right: 10px;
+    /* width: 100vw;
+    height: 100vh; */
+    /* background-size: cover; */
+    font-family: 'Lato', sans-serif;
+    & + div {
+        margin-top: 8px;
+    }
+  }
+
+
+    `;
+
+export const PopUp = styled.div`
+    display: inline-block;
+    width: 22vmin;
+    height: 22vmin;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: -16vmin;
+    top: -1vmin;
+    border: 1vmin solid #fff;
+    font-family: 'Lato', sans-serif;
+    & + div {
+        margin-top: 8px;
+    }
+    img {
+        height: 20vmin;
+        margin-left: -25%;
+    }
+
+    > img {
+    }
+`;
+
+export const Message = styled.div<ContainerProps>`
+    background: #ffe271;
+    padding: 2vmin 5vmin 2vmin 10vmin;
+    border-radius: 0px 50px 50px 0px;
+    font-size: 3vmin;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    ${(props) => toastTypeVariations[props.type || 'info']}
+`;
+
+export const User = styled.div<ContainerProps>`
+    text-align: left;
+    padding: 10px 20px 3px 50px;
+    border-radius: 0px 0px 20px;
+    font-size: 3.2vmin;
+    background: #fddede;
+    color: #83aebd;
+    display: inline-block;
+    float: left;
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'Lato', sans-serif;
+
+    button {
+        /* position: absolute; */
+        /* right: 16px;
+        top: 20px; */
+        top: 30px;
+        border: 0;
+        background: transparent;
+        color: inherit;
+    }
+    ${(props) => toastTypeVariationsButtom[props.type || 'info']}
+`;
+
+export const Chat = styled.div`
+    position: relative;
+    display: inline-block;
+    width: 40vw;
+    min-width: 400px;
+    max-width: 80%;
+    font-family: 'Lato', sans-serif;
+    animation: popFromBottom 0.5s ease-in-out;
+
+  @keyframes popFromBottom {
+    0% {
+      transform: translateY(300px) scale(0);
+    }
+
+    100% {
+      transform: translateY(0px) scale(1);
+    }
 `;
