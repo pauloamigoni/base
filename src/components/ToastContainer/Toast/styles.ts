@@ -48,7 +48,7 @@ export const Container = styled(animated.div)<ContainerProps>`
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     & + div {
-        margin-top: 8px;
+        margin-top: 2px;
     }
     ${(props) => toastTypeVariations[props.type || 'info']}
 
@@ -96,7 +96,7 @@ export const BodyContaniner = styled.div`
     font-style: italic;
     /* -webkit-font-smoothing: antialiased; */
     & + div {
-        margin-top: 8px;
+        margin-top: 2px;
     }
 `;
 
@@ -110,7 +110,7 @@ export const Body = styled.div`
     /* background-size: cover; */
     font-family: 'Lato', sans-serif;
     & + div {
-        margin-top: 8px;
+        margin-top: 2px;
     }
   }
 
@@ -129,7 +129,7 @@ export const PopUp = styled.div`
     border: 1vmin solid #fff;
     font-family: 'Lato', sans-serif;
     & + div {
-        margin-top: 8px;
+        margin-top: 2px;
     }
     img {
         height: 20vmin;

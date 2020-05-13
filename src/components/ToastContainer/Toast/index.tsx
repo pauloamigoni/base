@@ -5,6 +5,11 @@ import {
     // FiInfo,
     FiXCircle,
 } from 'react-icons/fi';
+
+import ImgSuccess from '../../../assets/success.jpg';
+import ImgInfo from '../../../assets/info.jpg';
+import ImgError from '../../../assets/error.jpg';
+
 import { ToastMessage, useToast } from '../../../hooks/toast';
 import { BodyContaniner, Body, Chat, PopUp, Message, User } from './styles';
 
@@ -14,25 +19,9 @@ interface ToastProps {
 }
 
 const img = {
-    info: (
-        <img
-            src="https://image.freepik.com/fotos-gratis/homem-barbudo-pensativo-sendo-profundo-em-pensamentos-olha-com-expressao-pensativa_95891-653.jpg"
-            alt=""
-        />
-    ),
-
-    error: (
-        <img
-            src="https://image.freepik.com/fotos-gratis/foto-de-um-jovem-homem-bravo-barbudo-esta-gritando-com-a-camera-no-espaco-amarelo_182527-391.jpg"
-            alt=""
-        />
-    ),
-    success: (
-        <img
-            src="https://image.freepik.com/fotos-gratis/feliz-homem-barbudo-com-olhos-azuis-e-expressao-alegre-aperta-os-punhos-sente-se-vencedor_95891-638.jpg"
-            alt=""
-        />
-    ),
+    info: <img src={ImgInfo} alt="" />,
+    error: <img src={ImgError} alt="" />,
+    success: <img src={ImgSuccess} alt="" />,
 };
 
 // const icons = {
